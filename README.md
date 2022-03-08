@@ -1,5 +1,6 @@
 TABLE  OF CONTENT 
-Intoduction
+
+   INTRODUCTION
 1. Container
     Benifit of Container
 2. Container vs Virtulization
@@ -10,38 +11,40 @@ Intoduction
 6. Feature
 7. Docker Component
    7.1     Docker Architucture
-                 Key Component of Docker Architucture
+              Key Component of Docker Architucture
    7.2     Docker Object
-                   Different type of docker Object
+              Different type of docker Object
    7.3     Docker Engine
    7.4     Docker Images
-                     Type of docker images
+               Type of docker images
   7.5       Docker Container
   7.6       Docker Networking
-                      Network Driver
-                         Type of network driver 
+                Network Driver
+                Type of network driver 
         
 Introduction
 In a Inial Stage  we  can run  only one application on one server.
 one server for one application , So , suppose 200 people use the application but when people incease load also increase , and we don't have the way to run multiple application on server. Every time for new application we have to  buy a new server .
 Virtual Machine
 
-Virtual Machine
 
-                              So, the one application for one server problem  solved by VMware  by virtual machine .VM machine solve one application on one server problem , Now you can run multiple application on same server . but vm required their own OS. Its far better than one application on one server but not so good.
-            Problems
+Virtual Machine
+So, the one application for one server problem  solved by VMware  by virtual machine .VM machine solve one application on one server problem , Now you can run multiple application on same server . but vm required their own OS. Its far better than one application on one server but not so good.
+
+PROBLEM -
  There is some problem are still there -
 1.  The problem comes with Virtual machine is its need there own Os. Which is also take some storage and space.
 2.  Shift one code one point to another then migration are consuming .
 3.  Suppose you built an application and give it to your developer friends to test it , but it not run on their machine , it say some files, or version is mismatch .
-Container - 
+
+
+CONTAINER -
 A container is a piece of software that package code and all of its software . It Contain the software package , data , dependencies and all other staf that required to run a container . 
 We also say that Containerization is define form of operating system virtulization through which application run isolated user spaces called Container .
 Container
 
-Container
-      
-          Benifit of Container - 
+
+BENEFIT OF CONTAINER -
  1. Portability -> A container seperate application from thier host operating system making then portable.
 
 2. Scability - > A Container application with a service application designe can handle growing workload
@@ -57,7 +60,8 @@ Container
 
 6. Continuity - > Containerization ensures continuity because container operate independently,
    if one container fail due to some reason it's does not affect other.
-Container Vs Virtualization - 
+ 
+CONTAINER VS VIRTULIZATION -
 1. Virtualization
 
 Virtualization allow you to run different systems on the same physical servers hardware . 
@@ -90,43 +94,45 @@ of this dependencies .
 
 The whole idea of docker is to easily developed the application ship container that can be deploy evreywhere.It is free and open platform creating , delivery and operating application.
 
-        Docker Platform .
+ 
+ DOCKER PLATFORM - 
 
-          Docker platform is one of the feature provide by docker to manage the lifecycle of container .
+Docker platform is one of the feature provide by docker to manage the lifecycle of container .
 Docker Provide the ability to package and run an applicaion loosly isolated enviroment called a
 container .
  
-             USE OF DOCKER PLATFORM -
-              we use docker platform to development , deployment , testing the application.
-              Wheather your production enviroment is Data Center , Cloud provider , hybried of tools its   work same for all .
 
-               ADVANTAGE OF DOCKER -
-                The advantage of docker is that we can  BUILT, TEST, DEPLOY AND MAINTAIN our application in very easy way . we don't need to move here and there for resources.
+USE OF DOCKER PLATFORM -
+       we use docker platform to development , deployment , testing the application.
+       Wheather your production enviroment is Data Center , Cloud provider , hybried of tools its   work same for all .
 
-               FEATURE -
-            The feature provided by docker are - 
+ADVANTAGE OF DOCKER -
+       The advantage of docker is that we can  BUILT, TEST, DEPLOY AND MAINTAIN our application in very easy way . we don't need to move here and there for resources.
 
-        1. SCALABLE
-        2.PROVIDE EASY AND FASTER CONFIGURATION
-        3. IS ABLE TO REDUCE THE SIZE
-        4. INCREASE PRODUCTIVIY
-        5. APPLICATION ISOLATION
-        6. SWARM
-        7. ROUTER MESH
-        8. SERVICES
-        9. SECURITY MANAGEMENT
+ FEATURE -
+       The feature provided by docker are - 
+
+  1. SCALABLE
+  2.PROVIDE EASY AND FASTER CONFIGURATION
+  3. IS ABLE TO REDUCE THE SIZE
+  4. INCREASE PRODUCTIVIY
+  5. APPLICATION ISOLATION
+  6. SWARM
+  7. ROUTER MESH
+  8. SERVICES
+  9. SECURITY MANAGEMENT
 
 
-      DOCKER COMPONENT -
+  DOCKER COMPONENT -
 
-          1. DOCKER ARCHITUCTURE -
+  1. DOCKER ARCHITUCTURE -
 
   Docker built on Client-server Architucture. The docker Client commnucate with docker daeman which handle construction , distribuation and execuation of docker container . 
 You can use docker client or docker daeman on same machine or you can use it seperatly. Docker Client and docker doeman use a RESTAPI , UNIX Socket Or network interface to commnucate .
 
 
 
-          KEY COMPONENT OF DOCKER ARCHITECTURE -
+ KEY COMPONENT OF DOCKER ARCHITECTURE -
 
 
 1.  DOCKER HOST
@@ -142,16 +148,18 @@ docker images are store in docker registry , docker hub is a public repository t
 4.  DOCKER OBJECT -
 you can create a images container , network , volume , plugins and another thing when you use docker
 
-       DIFFERENT TYPES OF DOCKER OBJECT -
-       1 . IMAGES-  
+
+
+ DIFFERENT TYPES OF DOCKER OBJECT -
+   1 . IMAGES-  
           Image is just a file that contain the instruction .
           Image is a read only template , lot of time image based on other image with another custum,
 
-       2.  Container 
-          docker container are created when you ran a docker images .It is a running instance of docker   image . This container contain all of application on the enviroment.Docker API or docker CLI are use to start and stop the container.
-        3. Volume . 
+   2.  Container 
+          docker container are created when you ran a docker images .It is a running instance of docker   image . This container contain all of application on tHE enviroment.Docker API or docker CLI are use to start and stop the container.
+     3. Volume . 
           volume are use to store persisitant data generated by docker and utilizes by docker container.
-        4.   Network.
+    4.   Network.
          A way for all isolated container to commnucate with one another.
 
 4. DOCKER ENGINE 
@@ -165,18 +173,18 @@ TO create a images you can create a docker file for a simple syntax for define t
 a layer of images are created a each instruction of docker file when you change the docker file and rebuilt the image only those layer are changes and rebuilt .
 
 
-    TYPES OF DOCKER IMAGES -
+ TYPES OF DOCKER IMAGES -
 
-    Docker images are divided into two categories .
+  Docker images are divided into two categories .
 
-        1. Parent images -
+ 1. Parent images -
     
     It is specified by the FORM directive in the image's pf dockerfile .
     It serves as a foundation of all docker command .
     A dockerfile from scratch directive creates a basic images without using any parent images.
 
 
-      2. BASE IMAGES -
+ 2. BASE IMAGES -
 
       It does not have parent images in his docker file .
       A FROM scratch directive is used in a dockerfile to create it .
@@ -208,7 +216,7 @@ DOCKER NETWORKING -
 
 Networking allow docker container to commnucate with each other .
 
-      NETWORK DRIVER -
+ NETWORK DRIVER -
 
 The network subsystem in docker is driver based plugable By default docker provide some driver with basic functionality are -
 1 Bridge
@@ -223,16 +231,16 @@ The network subsystem in docker is driver based plugable By default docker provi
 
 Docker bridge driver implement to rule the host machine to prevent container directly commnucate to host machine .
 
-     HOST -
+   HOST -
 when you use host network for container ,network stack of that container is not isolated from docker host.the container share the host's networking namespace and container not assigne the ip address .
 
-    OVERLAY -
+  OVERLAY -
 The overlay driver conncted to many docker daeman host to form a distribuated network when encryption is enable then this network sit top on overlay specific network allow container (including swarm service)connected to it .
 
-     MACVLAN -
+  MACVLAN -
 Its a idea for legacy network traffic monitoring app that demand to directly conected to the physical network .in this case macvlan driver assigne mac address to each container virtual network interface , making appear to physical network interface link directly to physical network.
 
-     NONE -
+  NONE -
 It is use to completely disable the network stack on the container.
 You can use network none flag when start a container .
 
@@ -256,7 +264,7 @@ DOCKER HUB -
 
  Docker hub is docker host repository that allow us to share the images with the team
 
-         FEATURE  OF DOCKER HUB -
+   FEATURE  OF DOCKER HUB -
          1. PRIVATE REPO
          2. AUTOMATED BUILT
          3. TEAM AND ORGANIATION
@@ -265,7 +273,7 @@ DOCKER HUB -
          6. WEB HOOKS
 
 
-         DOCKER HUB ALLOW YOU TO -
+   DOCKER HUB ALLOW YOU TO -
          1. EXPLORE WORLD LARGEST CONTAINER REPOSITIORY
          2. EASY SEARCH OVER 1 MILION IMAGE
          3. SHARE AND STORE IMAGES ON PUBLIC AND PRIVATE REPO
@@ -276,7 +284,7 @@ DOCKER HUB -
 
 
 
-       DOCKER COMPOSED -
+ DOCKER COMPOSED -
 
 
 Docker composed is a tools that allow user to define and run multi-container docker application.
